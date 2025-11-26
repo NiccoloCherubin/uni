@@ -19,6 +19,5 @@ int main (int argc, char **argv)
     printf("Area del rettangolo: %.2f\n", area_figura(&df2));
     printf("Area del cerchio: %.2f\n", area_figura(&df3));
     printf("Area del triangolo: %.2f\n", area_figura(&df4));
-    
     return 0;
 }

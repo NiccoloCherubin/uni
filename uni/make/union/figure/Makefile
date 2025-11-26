@@ -1,4 +1,4 @@
-tot.exe: main.o
+tot.exe: main.o figura.o
 	gcc main.o figura.o -o tot.exe
 
 main.o: main.c figura.h
