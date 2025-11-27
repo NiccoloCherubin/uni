@@ -23,10 +23,10 @@ void input_studente(Studente *s, Persona *p, int matricola, Classe classe)
 void input_docente(Docente *d, Persona *p, Classe *classi, Materia *materie, int num_classi, int num_materie)
 {
     d->persona = *p;
-    for(int i = 0; i < num_classi && i < DIM_CLASSI_MAX; i++) {
+    for(int i = 0; i < num_classi; i++) {
         d->classi[i] = classi[i];
     }
-    for(int j = 0; j < num_materie && j < DIM_MATERIE_MAX; j++) {
+    for(int j = 0; j < num_materie; j++) {
         d->materie_insegnate[j] = materie[j];
     }
 }
@@ -70,15 +70,15 @@ void stampa_studente(Studente *s)
     printf("Matricola: %d\n", s->matricola);
     printf("Classe: %d%c\n", s->classe.anno, s->classe.sezione);
 }
-void stampa_docente(Docente *d)
+void stampa_docente(Docente *d, int materie, int classi)
 {
     stampa_persona(&d->persona);
     printf("Classi insegnate:\n");
-    for(int i = 0; i < DIM_CLASSI_MAX; i++) {
+    for(int i = 0; i < classi; i++) {
         printf(" - %d%c\n", d->classi[i].anno, d->classi[i].sezione);
     }
     printf("Materie insegnate:\n");
-    for(int j = 0; j < DIM_MATERIE_MAX; j++) {
+    for(int j = 0; j < materie; j++) {
         printf(" - %d\n", d->materie_insegnate[j]);
     }
 }
@@ -92,14 +92,14 @@ void stampa_preside(Preside *p)
     stampa_persona(&p->persona);
     printf("Anni di servizio: %d\n", p->anni_di_servizio);
 }
-void stampa_utente(Utente *u, Ruolo *r)
+void stampa_utente(Utente *u, Ruolo *r, int materie, int classi)
 {
     switch(*r) {
         case studente:
             stampa_studente(&u->studente);
             break;
         case docente:
-            stampa_docente(&u->docente);
+            stampa_docente(&u->docente,materie,classi);
             break;
         case ata:
             stampa_ata(&u->ata);

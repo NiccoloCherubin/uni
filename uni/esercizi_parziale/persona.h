@@ -59,7 +59,7 @@ void input_preside(Preside *p, Persona per, int anni_di_servizio);
 
 void stampa_persona(Persona *p);
 void stampa_studente(Studente *s);
-void stampa_docente(Docente *d);
+void stampa_docente(Docente *d,int materie, int classi);
 void stampa_ata(Ata *a);
 void stampa_preside(Preside *p);
-void stampa_utente(Utente *u, Ruolo *r);
+void stampa_utente(Utente *u, Ruolo *r, int materie, int classi);

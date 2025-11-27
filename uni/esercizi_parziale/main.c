@@ -1,10 +1,11 @@
 #include "persona.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(int argc, char *argv[]) {
   Persona p_studente;
   input_persona(&p_studente, "Mario", "Rossi", MASCHIO, studente);
+
+  printf("stampa persona normale \n");
   stampa_persona(&p_studente);
 
   Studente s1;
@@ -17,6 +18,7 @@ int main(int argc, char *argv[]) {
 
   Persona p_docente;
   input_persona(&p_docente, "Anna", "Bianchi", FEMMINA, docente);
+  printf("stampa persona normale \n");
   stampa_persona(&p_docente);
 
   Docente d1;
@@ -30,7 +32,7 @@ int main(int argc, char *argv[]) {
   stampa_studente(&utenti[0].studente);
 
   printf("docente da utenti \n");
-  stampa_docente(&utenti[1].docente);
+  stampa_docente(&utenti[1].docente, 1, 2);
 
   return 0;
 }
