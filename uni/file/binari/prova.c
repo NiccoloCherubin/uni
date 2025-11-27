@@ -1,53 +1,49 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char **argv) {
-  FILE *fp = fopen("file.dat", "wb");
-  FILE *fr;
-  int numeri[] = {10, 20, 30, 40, 50};
-  int result;
-  if (fp == NULL) {
-    perror("Error opening file");
-    return EXIT_FAILURE;
-  }
+int main() {
+    FILE *fp = fopen("file.dat", "wb");
+    FILE *fr;
+    int numeri[] = {10, 20, 30, 40, 50};
+    int buffer;
 
-  // scrivo su file binario
-  for (int i = 0; i < 5; i++) {
-    result = fwrite(&numeri[i], sizeof(int), 1, fp);
-    if (result != 1) {
-      perror("Error writing to file");
-      fclose(fp);
-      return EXIT_FAILURE;
+
+    if (fp == NULL) {
+        perror("Error opening file");
+        return EXIT_FAILURE;
     }
-  }
 
-  fclose(fp);
-
-  fp = fopen("file.dat", "rb");
-
-  if (fp == NULL) {
-    perror("Error opening file");
-    return EXIT_FAILURE;
-  }
-
-  fr = fopen("file.txt", "w");
-
-  if (fr == NULL) {
-    perror("Error opening file for reading");
-    fclose(fp);
-    return EXIT_FAILURE;
-  }
-  // prendo da file binario e stampo in file testo
-
-  while (!feof(fp)) {
-    result = fread(&result, sizeof(int), 1, fp);
-    if (result == 1) {
-      fprintf(fr, "%d\n", result);
+    // scrivo su file binario
+    for (int i = 0; i < 5; i++) {
+        if (fwrite(&numeri[i], sizeof(int), 1, fp) != 1) {
+            perror("Error writing to file");
+            fclose(fp);
+            return EXIT_FAILURE;
+        }
     }
-  }
 
     fclose(fp);
-    fclose(fp);
 
-  return 0;
+    fp = fopen("file.dat", "rb");
+    if (fp == NULL) {
+        perror("Error opening binary file");
+        return EXIT_FAILURE;
+    }
+
+    fr = fopen("file.txt", "w");
+    if (fr == NULL) {
+        perror("Error opening text file");
+        fclose(fp);
+        return EXIT_FAILURE;
+    }
+
+    // leggo correttamente da file binario
+    while (fread(&buffer, sizeof(int), 1, fp) == 1) {
+        fprintf(fr, "%d\n", buffer);
+    }
+
+    fclose(fp);
+    fclose(fr);
+
+    return 0;
 }
