@@ -1,9 +1,5 @@
 #include <stdio.h>
-
-typedef struct{
-char nome[22];
-float stipendio;
-} Dipendente;
+#include "dipendente.c"
 
 int main() {
     Dipendente dipendenti[] = {
