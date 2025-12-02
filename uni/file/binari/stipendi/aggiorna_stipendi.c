@@ -20,6 +20,10 @@ int main(int argc, char ** argv)
         fwrite(&d, sizeof(Dipendente), 1, f); // riscrive la struttura aggiornata
     }
 
+       if(fclose(f) != 0) {
+        perror("Errore nella chiusura del file");
+        exit(-1);
+    }
 
     return 0;
 }

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dipendente.c"
 
 int main() {
@@ -23,7 +24,10 @@ int main() {
         fwrite(&dipendenti[i], sizeof(Dipendente), 1, f);
     }
 
-    fclose(f);
+       if(fclose(f) != 0) {
+        perror("Errore nella chiusura del file");
+        exit(-1);
+    }
 
     return 0;
 }
