@@ -7,7 +7,7 @@ void inserimentoTesta(Lista *l, Dato val);
 void inserimentoOrd(Lista *l, Dato val);
 Lista* ricerca(Lista *l, Dato val);
 void elimina_elemento(Lista *l, Dato val);
-void elimina_tutto(Lista *l, Dato val);
+void elimina_tutto(Lista *l);
 int lunghezza(Lista *l);
 void stampa(Lista l);
 

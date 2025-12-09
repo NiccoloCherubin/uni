@@ -8,15 +8,10 @@ void nuovaLista(Lista *l) {
 }
 int vuota(Lista *l) { return *l == NULL; }
 void inserimentoTesta(Lista *l, Dato val) {
-  if (vuota(l)) {
-    printf("lista vuota");
-    exit(-1);
-  }
-
-  Nodo *nodo = (Nodo *)malloc(sizeof(Nodo));
+  Nodo *nodo = malloc(sizeof(Nodo));
   nodo->dato = val;
-  nodo->next = *l; // assegno il valore dell'inizio della lista
-  *l = nodo;       // nuovo inizio
+  nodo->next = *l;
+  *l = nodo;
 }
 
 Lista *ricerca(Lista *l, Dato val) {
@@ -36,11 +31,34 @@ void inserimentoOrd(Lista *l, Dato val) {
                             // ordine crescente nella lista
 }
 void stampa(Lista l) {
-  while (1) {
+  while (l != NULL) {
     printf("%d \n", l->dato);
     l = l->next;
-    if (l == NULL) {
-      break;
-    }
   }
+}
+
+void elimina_elemento(Lista *l, Dato val)
+{
+    Lista tmp = *l;
+    *l = (*l)->next;
+    free(tmp);
+}
+
+void elimina_tutto(Lista *l)
+{
+    while (*l != NULL) {
+        Nodo *tmp = *l;
+        *l = (*l)->next;
+        free(tmp);
+    }
+}
+
+
+int lunghezza(Lista *l) {
+  int cont = 0;
+    while (l != NULL) {
+        cont++;
+        *l = (*l)->next;
+    }
+    return cont;
 }
