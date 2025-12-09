@@ -9,5 +9,5 @@ Lista* ricerca(Lista *l, Dato val);
 void elimina_elemento(Lista *l, Dato val);
 void elimina_tutto(Lista *l, Dato val);
 int lunghezza(Lista *l);
-void stampa(Lista *l);
+void stampa(Lista l);
 

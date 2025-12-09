@@ -12,7 +12,8 @@ int main(int argc, char **argv)
 
     inserimentoOrd(&lista, prova);
 
-    stampa(&lista);
+
+    stampa(lista);
 
 
     return 0;
