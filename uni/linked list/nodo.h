@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
-#define DIM 100
 
-typedef struct{
+typedef struct nodo{
 int dato;
-int *next;
+struct nodo *next;
 }Nodo;
 
