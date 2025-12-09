@@ -1,4 +1,3 @@
-#include "nodo.h";
-
+#include "nodo.h"
 typedef Nodo* Lista;
 
