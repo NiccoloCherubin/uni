@@ -1,5 +1,4 @@
 #include "linkedList.c"
-#include <bits/types/stack_t.h>
 #include <stdio.h>
 #define DIM 10
 
