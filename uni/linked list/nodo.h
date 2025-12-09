@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-typedef int Dato;
+#include "dato.h"
 typedef struct nodo{
 Dato dato;
 struct nodo *next;
