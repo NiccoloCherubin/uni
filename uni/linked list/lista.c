@@ -11,13 +11,17 @@ int main(int argc, char **argv)
 
     nuovaLista(&lista);
 
-    inserimentoTesta(&lista, prove[1]);
+    /*inserimentoTesta(&lista, prove[1]);
 
     for(int i = 2; i < DIM; i++)
     {
         inserimentoOrd(&lista, prove[i]);
-    }    
+    } */
     
+    lista = arrayToList(prove,DIM);
+    
+    printf("elemento a cui punta la lista dopo essere stata riempita %d \n", lista->dato);
+
     printf("Lista ordinata \n");
     stampa(lista);
 

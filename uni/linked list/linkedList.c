@@ -15,7 +15,7 @@ void inserimentoTesta(Lista *l, Dato val) {
 }
 
 Lista *ricerca(Lista *l, Dato val) {
-  while (*l) {
+  while (*l != NULL) {
     if ((*l)->dato > val) // la lista deve essere in ordine crescente
     {
       break;
@@ -39,10 +39,21 @@ void stampa(Lista l) {
 
 void elimina_elemento(Lista *l, Dato val)
 {
-    Lista tmp = *l;
-    *l = (*l)->next;
-    free(tmp);
+    if (vuota(l)) exit(-1); // controllo se la lista è vuota
+
+    Lista *p = l; // faccio copia di supporto della lista
+
+    while (*p != NULL && (*p)->dato != val) { // cerco l'elemento da eliminare
+        p = &(*p)->next;
+    }
+
+    if (*p != NULL) {
+        Lista tmp = *p;
+        *p = (*p)->next;
+        free(tmp);
+    }
 }
+
 
 void elimina_tutto(Lista *l)
 {
@@ -54,11 +65,11 @@ void elimina_tutto(Lista *l)
 }
 
 
-int lunghezza(Lista *l) {
+int lunghezza(Lista l) {
   int cont = 0;
     while (l != NULL) {
         cont++;
-        *l = (*l)->next;
+        l = (l)->next;
     }
     return cont;
 }
@@ -72,4 +83,17 @@ void reverse(Lista l1, Lista *l2)
     l1 = l1->next;
   }
 
+}
+
+Lista arrayToList(Dato *arr, int lunghezza)
+{
+  Lista l;
+  nuovaLista(&l);
+
+  for(int i = lunghezza-1; i >= 0; i--)
+  {
+    inserimentoOrd(&l, arr[i]);
+  }
+
+  return l;
 }
