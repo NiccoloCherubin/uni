@@ -62,3 +62,14 @@ int lunghezza(Lista *l) {
     }
     return cont;
 }
+
+void reverse(Lista l1, Lista *l2)
+{
+  *l2 = NULL; // inizializzo la lista nuova
+
+  while (l1 != NULL) {
+    inserimentoTesta(l2, l1->dato);
+    l1 = l1->next;
+  }
+
+}

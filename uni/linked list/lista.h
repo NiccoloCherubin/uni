@@ -10,4 +10,4 @@ void elimina_elemento(Lista *l, Dato val);
 void elimina_tutto(Lista *l);
 int lunghezza(Lista *l);
 void stampa(Lista l);
-
+void reverse(Lista l1, Lista *l2);
