@@ -1,4 +1,4 @@
-#include "linkedList.c"
+#include "lista.h"
 #include <stdio.h>
 #define DIM 10
 
