@@ -1,6 +1,6 @@
 #include "veicolo.h"
 typedef struct nodo
 {
-    Veicolo veicolo;
+    VeicoloConTipo veicolo;
     struct nodo *next;
 } Nodo;

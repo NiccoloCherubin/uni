@@ -12,12 +12,14 @@ typedef struct {
 
 typedef struct
 {    
+    Tipo_Veicolo tipoV;
     InfoGenerali info;
     int cavalli;
 } Auto;
 
 typedef struct
 {
+    Tipo_Veicolo tipoV;
     InfoGenerali info;
     int numero_tempi;
     Tipo_moto tipo;
@@ -26,6 +28,15 @@ typedef struct
 typedef union
 {
     Auto auto_;
-    Moto moto;
-
+    Moto moto;    
 } Veicolo;
+
+typedef struct { // struct fatta per sapere il tipo del veicolo
+    Tipo_Veicolo tipo;
+    Veicolo dati;
+} VeicoloConTipo;
+
+void stampaInfo(VeicoloConTipo veicolo);
+void stampaAuto(VeicoloConTipo auto_);
+void stampaMoto(VeicoloConTipo moto);
+int verificaVeicolo(VeicoloConTipo veicolo);

@@ -15,3 +15,9 @@ typedef enum
     Enduro,
     Strada
 }Tipo_moto ;
+
+typedef enum
+{
+    Automobile,
+    Motocicletta
+} Tipo_Veicolo;
