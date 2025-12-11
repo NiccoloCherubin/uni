@@ -1,5 +1,5 @@
 tot.exe: main.o lista.o veicolo.o
-	gcc -c main.o lista.o veicolo.o -o tot.exe
+	gcc main.o lista.o veicolo.o -o tot.exe
 
 main.o: main.c lista.h
 	gcc -c main.c -o main.o
