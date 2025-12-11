@@ -4,12 +4,12 @@
 
 void nuovaLista(Lista *l)
 {
-    l = NULL;
+    *l = NULL;
 }
 
 int vuota(Lista *l)
 {
-    return l == NULL;
+    return *l == NULL;
 }
 
 void inserimentoTesta(Lista *l, VeicoloConTipo val)
@@ -35,4 +35,23 @@ void reverse(Lista l1, Lista *l2)
 void stampa(Lista l)
 {
     printf("const char *, ...");
+}
+
+void inserimentoCoda(Lista *l, VeicoloConTipo val)
+{
+    if(vuota(l))
+    {
+        perror("Lista vuota");        
+        exit(-1);
+    }
+    
+    while ((*l)->next != NULL) { // scorro tutta la lista
+        l = &(*l)->next;
+    }
+
+    Nodo *aux = (Nodo*)malloc(sizeof(Nodo)); // creo copia nodo
+    aux->next = NULL; // essendo l'ultimo elemento non ne ho uno dopo
+    aux->veicolo = (*l)->veicolo;
+
+    (*l)->next = aux; // aggiungo l'elemento alla fine della lista
 }

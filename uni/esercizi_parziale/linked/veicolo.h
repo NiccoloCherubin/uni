@@ -28,7 +28,7 @@ typedef struct
 typedef union
 {
     Auto auto_;
-    Moto moto;    
+    Moto moto;
 } Veicolo;
 
 typedef struct { // struct fatta per sapere il tipo del veicolo

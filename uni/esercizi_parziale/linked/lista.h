@@ -4,6 +4,7 @@ typedef Nodo *Lista;
 
 void nuovaLista(Lista *l);
 void inserimentoTesta(Lista *l, VeicoloConTipo val);
+void inserimentoCoda(Lista *l, VeicoloConTipo val);
 void inserimentoOrd(Lista *l,VeicoloConTipo val);
 void elimina_elemento(Lista *l, VeicoloConTipo val);
 void elimina_tutto(Lista *l);
