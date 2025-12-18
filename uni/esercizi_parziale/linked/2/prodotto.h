@@ -16,5 +16,7 @@ typedef Nodo* Lista;
 void nuovaLista(Lista *l);
 void inserimentoTesta(Lista *l, Prodotto prodotto);
 void eliminaElemento(Lista* l, Prodotto prodotto);
+Lista ricerca(Lista l, Prodotto prodotto);
 void eliminaTutto(Lista *l);
-void letturaDaFile(Lista *l);
+void stampaLista(Lista l);
+void stampaProdotto(Prodotto prodotto);

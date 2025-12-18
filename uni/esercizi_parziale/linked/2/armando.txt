@@ -1,0 +1,80 @@
+prodotto 0 
+id: 18 
+descrizione: Mouse wireless 
+prezzo: 331 
+prodotto 1 
+id: 63 
+descrizione: Chiavetta USB 
+prezzo: 133 
+prodotto 2 
+id: 3 
+descrizione: Tastiera meccanica 
+prezzo: 426 
+prodotto 3 
+id: 15 
+descrizione: Monitor 24 pollici 
+prezzo: 233 
+prodotto 4 
+id: 90 
+descrizione: Monitor 24 pollici 
+prezzo: 216 
+prodotto 5 
+id: 83 
+descrizione: Tastiera meccanica 
+prezzo: 28 
+prodotto 6 
+id: 15 
+descrizione: Hard disk esterno 
+prezzo: 268 
+prodotto 7 
+id: 49 
+descrizione: Mouse wireless 
+prezzo: 263 
+prodotto 8 
+id: 91 
+descrizione: Cuffie Bluetooth 
+prezzo: 173 
+prodotto 9 
+id: 7 
+descrizione: Hard disk esterno 
+prezzo: 122 
+prodotto 10 
+id: 84 
+descrizione: Mouse wireless 
+prezzo: 31 
+prodotto 11 
+id: 24 
+descrizione: Chiavetta USB 
+prezzo: 284 
+prodotto 12 
+id: 10 
+descrizione: Hard disk esterno 
+prezzo: 389 
+prodotto 13 
+id: 29 
+descrizione: Stampante laser 
+prezzo: 128 
+prodotto 14 
+id: 22 
+descrizione: Chiavetta USB 
+prezzo: 442 
+prodotto 15 
+id: 66 
+descrizione: Monitor 24 pollici 
+prezzo: 500 
+prodotto 16 
+id: 42 
+descrizione: Router WiFi 
+prezzo: 308 
+prodotto 17 
+id: 64 
+descrizione: Monitor 24 pollici 
+prezzo: 475 
+prodotto 18 
+id: 42 
+descrizione: Webcam HD 
+prezzo: 322 
+prodotto 19 
+id: 62 
+descrizione: Cuffie Bluetooth 
+prezzo: 105 
